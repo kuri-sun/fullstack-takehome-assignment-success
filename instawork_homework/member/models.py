@@ -21,14 +21,11 @@ class Member(models.Model):
 
 
     # helper methods
+    def phone_number_text(self):
+      return str(self.phone_number[0:3] + "-" + self.phone_number[3:6] + "-" + self.phone_number[6:])
+      
     def role_text(self):
-        if self.role == 1:
-            return " (admin)"
-        else:
-            return ""
-
-    def role_description(self):
-        if self.role == 1:
-          return ROLES[1][1]
-        else:
-          return ROLES[0][1]
+      if self.role == 1:
+        return " (admin)"
+      else:
+        return ""
