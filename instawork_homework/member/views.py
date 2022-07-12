@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import Member
 from .form import MemberForm
 
@@ -18,7 +18,7 @@ def homePage(request):
     return render(request, 'instawork_homework/home.html', context)
 
 
-def addPage(request):
+def addMember(request):
     """
     render form.html page when user access to "/add"
 
@@ -26,10 +26,6 @@ def addPage(request):
     :return http response to render form.html to user's browser.
     """ 
     page = 'add'
-    roles = [
-        (0, "Regular - Can't delete members"),
-        (1, "Admin - Can delete members")
-    ]
 
     if request.method == 'POST':
       form = MemberForm(request.POST) 
@@ -37,25 +33,48 @@ def addPage(request):
         form.save() # save to db
         return redirect('home') # push to home.html
       else:
-        context = {'page': page, 'roles': roles, 'form': form, 'errors': dict(form.errors) }
+        context = {'page': page, 'form': form, 'errors': dict(form.errors) }
         return render(request, 'instawork_homework/form.html', context) # push same page again with error message.
     else:
-      context = {'page': page, 'roles': roles, 'form': MemberForm()}
+      context = {'page': page, 'form': MemberForm()}
       return render(request, 'instawork_homework/form.html', context)
 
 
-def editPage(request, pk):
+def editMember(request, pk):
     """
     render form.html page when user access to "/edit"
 
     :request http request object.
+    :pk primary key for Member object.
     :return http response to render form.html to user's browser.
     """ 
     page = 'edit'
-    roles = [
-        (0, "Regular - Can't delete members"),
-        (1, "Admin - Can delete members")
-    ]
-    member = Member.objects.get(id=pk)
-    context = {'page': page, 'roles': roles, 'member': member}
-    return render(request, 'instawork_homework/form.html', context)
+    member = get_object_or_404(Member, id=pk)
+    form = MemberForm(instance=member)
+
+    if request.method == 'POST':
+      # POST request 
+      form = MemberForm(request.POST, instance=member)
+      if form.is_valid():
+        form.save() # update db Member data
+        return redirect('home') # push to home.html
+      else:
+        context = {'page': page, 'form': form, 'errors': dict(form.errors) }
+        return render(request, 'instawork_homework/form.html', context) # push same page again with error message.
+    else:
+      # GET request 
+      context = {'page': page, 'form': form, 'member': member}
+      return render(request, 'instawork_homework/form.html', context)
+
+
+def deleteMember(request, pk):
+    """
+    user click delete button to delete a user.
+
+    :request http request object.
+    :pk primary key for Member object.
+    :return http response to render form.html to user's browser.
+    """ 
+    member = get_object_or_404(Member, id=pk)
+    member.delete()
+    return redirect('home')
