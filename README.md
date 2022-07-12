@@ -1,20 +1,20 @@
-# Full-stack take-home assignment <img src="https://play-lh.googleusercontent.com/pE4AjuQLjUMzulbNL6fjVX4jMTXAtmO4kwHCEaU_0hfGJBIO3HRQ5alMsHwlAajhBa8=w480-h960-rw" alt="instawork-logo" style="height: 30px; width: 30px; margin-left: 10px;" />
+<h2> <span style="font-size: 25px;">Full-stack take-home assignment</span> <img src="https://play-lh.googleusercontent.com/pE4AjuQLjUMzulbNL6fjVX4jMTXAtmO4kwHCEaU_0hfGJBIO3HRQ5alMsHwlAajhBa8=w480-h960-rw" alt="instawork-logo" style="height: 30px; width: 30px; margin-left: 10px;" /> </h2>
 
 <span style='color: gray;'>This is the assignment for Instawork's Fall Internship 2022 position.</span>
 
-<div style='margin-bottom: 25px;'></div>
+<div style='margin-bottom: 45px;'></div>
 
-### Project Requirements
+<h3 style="font-size: 18px; font-weight: 500;"> Project Requirements </h3>
 
 <hr/>
-<p><span style='margin-right: 10px;'>✅</span>Create a public repository on your Github account</p>
-<p><span style='margin-right: 10px;'>✅</span>Implement the spec <a href="#implementaion">below</a> and push it to your repository.</p>
-<p><span style='margin-right: 10px;'>✅</span>Create proper documentation for <a href="#building">building</a> and <a href="#testing">testing</a> the project</p>
-<p><span style='margin-right: 10px;'>✅</span>Add <a href="https://github.com/Taqdeer">Taqdeer</a> or <a href="https://github.com/LiJu21">LiJu21</a> as a collaborator to the github project</p>
+<p><span style='margin-right: 10px;'>✅ </span>Create a public repository on your Github account</p>
+<p><span style='margin-right: 10px;'>✅ </span>Implement the spec <a href="#implementaion">below</a> and push it to your repository.</p>
+<p><span style='margin-right: 10px;'>✅  </span>Create proper documentation for <a href="#building">building</a> and <a href="#testing">testing</a> the project</p>
+<p><span style='margin-right: 10px;'>✅ </span>Add <a href="https://github.com/Taqdeer">Taqdeer</a> or <a href="https://github.com/LiJu21">LiJu21</a> as a collaborator to the github project</p>
 <p><span style='margin-right: 10px;'>⛔ (By reviewer)</span>We may leave some comments on the code with suggestions on how to improve the implementation.</p>
 <br/>
 
-### <span id="#building">Build application</span>
+<h3 id="building" style="font-size: 18px; font-weight: 500;">Build application</h3>
 
 <hr/>
 <p>1. Make sure you're in base directory. and start virtual environment.</p>
@@ -37,9 +37,10 @@ python manage.py runserver
 
 <br/>
 
-### <span id="#testing">Testing application</span>
+<h3 id="testing" style="font-size: 18px; font-weight: 500;">Testing application</h3>
 
 <hr/>
+
 <p>1. Go to project directory.</p>
 
 ```
@@ -54,11 +55,11 @@ python manage.py test member
 
 <br/>
 
-### Application overview
+<h3 id="testing" style="font-size: 18px; font-weight: 500;">Application overview</h3>
 
 <hr/>
 
-<h4 id="#implementaion" style="margin: 15px 0 8px 0; font-weight: 500;">About</h4>
+<h4 id="implementaion" style="margin: 15px 0 8px 0; font-weight: 500;">About</h4>
 The project is to implement a simple team-member management application that allows the
 user to view, edit, add, and delete team members.
 I used frontend as HTML, CSS and making those up by Bootstrap4, backend as Django and database as SQLite.
