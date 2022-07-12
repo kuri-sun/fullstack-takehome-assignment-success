@@ -2,7 +2,7 @@
 
 <span style='color: gray;'>This is the assignment for Instawork's Fall Internship 2022 position.</span>
 
-<div style='margin-bottom: 45px;'></div>
+<br />
 
 <h3 style="font-size: 18px; font-weight: 500;"> Project Requirements </h3>
 
