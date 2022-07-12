@@ -1,4 +1,4 @@
-<h2> <span style="font-size: 30px;">Full-stack take-home assignment</span> <img src="https://play-lh.googleusercontent.com/pE4AjuQLjUMzulbNL6fjVX4jMTXAtmO4kwHCEaU_0hfGJBIO3HRQ5alMsHwlAajhBa8=w480-h960-rw" alt="instawork-logo" style="height: 30px; width: 30px; margin-left: 10px;" /> </h2>
+# <span style="font-size: 30px;">Full-stack take-home assignment</span> <img src="https://play-lh.googleusercontent.com/pE4AjuQLjUMzulbNL6fjVX4jMTXAtmO4kwHCEaU_0hfGJBIO3HRQ5alMsHwlAajhBa8=w480-h960-rw" alt="instawork-logo" style="height: 30px; width: 30px; margin-left: 10px;" />
 
 <span style='color: gray;'>This is the assignment for Instawork's Fall Internship 2022 position.</span>
 
