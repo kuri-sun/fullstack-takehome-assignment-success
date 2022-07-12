@@ -53,7 +53,6 @@ def editMember(request, pk):
     form = MemberForm(instance=member)
 
     if request.method == 'POST':
-      # POST request 
       form = MemberForm(request.POST, instance=member)
       if form.is_valid():
         form.save() # update db Member data
@@ -62,7 +61,6 @@ def editMember(request, pk):
         context = {'page': page, 'form': form, 'errors': dict(form.errors) }
         return render(request, 'instawork_homework/form.html', context) # push same page again with error message.
     else:
-      # GET request 
       context = {'page': page, 'form': form, 'member': member}
       return render(request, 'instawork_homework/form.html', context)
 
