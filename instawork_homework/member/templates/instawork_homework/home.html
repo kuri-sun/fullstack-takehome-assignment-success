@@ -1,15 +1,15 @@
 {% extends 'main.html' %} {% load static %} {% block content %}
 <!-- member create(+) button -->
 <div class="add-member-section">
-  <a href="/add"><i class="fa-solid fa-plus"></i></a>
+  <a href="{% url 'add' %}"><i class="fa-solid fa-plus"></i></a>
 </div>
 
 <!-- members list title -->
 <h2>Team Members</h2>
-{% if team_count <= 1 %}
-<p class="text-muted mb-5">You have {{ team_count }} team member.</p>
+{% if members_count <= 1 %}
+<p class="h5 text-muted mb-5">You have {{ members_count }} team member.</p>
 {% else %}
-<p class="text-muted mb-5">You have {{ team_count }} team members.</p>
+<p class="h5 text-muted mb-5">You have {{ members_count }} team members.</p>
 {% endif %}
 
 <!-- START members list -->
@@ -18,7 +18,7 @@
 <ul class="list-group">
   {% for member in members %}
   <div>
-    <a href="/update">
+    <a href="{% url 'edit' member.id %}">
       <li class="d-flex">
         <div class="image-cropper">
           <img src="{% static 'images/profile.png' %}" class="image-profile" />

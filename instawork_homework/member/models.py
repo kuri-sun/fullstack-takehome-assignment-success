@@ -1,9 +1,11 @@
 from django.db import models
 from django.core.validators import RegexValidator
 
+
 # Create your models here.
 
 class Member(models.Model):
+    # helper properties 
     ROLES = [
         (0, "Regular - Can't delete members"),
         (1, "Admin - Can delete members")
@@ -17,7 +19,8 @@ class Member(models.Model):
     role = models.IntegerField(choices=ROLES, default=0)
     phone_number = models.CharField(validators=[phone_regex], max_length=17, null=True, blank=False)
 
-    # helpers
+
+    # helper methods
     def role_text(self):
         if self.role == 1:
             return " (admin)"
