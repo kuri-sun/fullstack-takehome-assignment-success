@@ -1,6 +1,8 @@
 # <span style="font-size: 30px;">Full-stack take-home assignment</span> <img src="https://play-lh.googleusercontent.com/pE4AjuQLjUMzulbNL6fjVX4jMTXAtmO4kwHCEaU_0hfGJBIO3HRQ5alMsHwlAajhBa8=w480-h960-rw" alt="instawork-logo" style="height: 30px; width: 30px; margin-left: 10px;" />
 
-<span style='color: gray;'>This is the assignment for Instawork's Fall Internship 2022 position.</span>
+<span style='color: gray;'>This is the assignment for Instawork's Fall Internship 2022 position. <br/>The project is to implement a simple team-member management application that allows the
+user to view, edit, add, and delete team members.
+</span>
 
 <br />
 
@@ -54,8 +56,6 @@ python manage.py test member
 ## <span id="testing">Application overview</span>
 
 <h4 id="implementaion" style="margin: 15px 0 8px 0; font-weight: 500;">About</h4>
-The project is to implement a simple team-member management application that allows the
-user to view, edit, add, and delete team members.
 I used frontend as HTML, CSS and making those up by Bootstrap4, backend as Django and database as SQLite.
 using Django features such as model forms and generic class-based views to minimize the amount of code.
 
@@ -64,7 +64,7 @@ using Django features such as model forms and generic class-based views to minim
   <li>HTML, CSS</li>
   <li>Django</li>
   <li>SQLite</li>
-  <li>Bootstrap4, Fontawesome</li>
+  <li>Bootstrap4, Font Awesome</li>
 </ul>
 
 <h4 style="margin: 15px 0 8px 0; font-weight: 500;">Application Looks</h4>
