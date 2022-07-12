@@ -1,0 +1,40 @@
+.list-cotainer {
+  margin: 2% 5%;
+}
+
+.add-member-section {
+  float: right;
+}
+
+.fa-plus {
+  color: rgb(90, 157, 244);
+  font-size: 2.2rem;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.user-fullname {
+  font-size: 1.25rem;
+}
+
+.image-profile {
+  display: inline;
+  margin: 0 auto;
+  height: 3rem;
+  width: auto;
+}
+
+.image-cropper {
+  width: 3rem;
+  height: 3rem;
+  margin-top: 0.2rem;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}

@@ -1,0 +1,43 @@
+{% extends 'main.html' %} {% load static %} {% block content %}
+<!-- member create(+) button -->
+<div class="add-member-section">
+  <a href="/add"><i class="fa-solid fa-plus"></i></a>
+</div>
+
+<!-- members list title -->
+<h2>Team Members</h2>
+{% if team_count <= 1 %}
+<p class="text-muted mb-5">You have {{ team_count }} team member.</p>
+{% else %}
+<p class="text-muted mb-5">You have {{ team_count }} team members.</p>
+{% endif %}
+
+<!-- START members list -->
+<hr />
+{% if members %}
+<ul class="list-group">
+  {% for member in members %}
+  <div>
+    <a href="/update">
+      <li class="d-flex">
+        <div class="image-cropper">
+          <img src="{% static 'images/profile.png' %}" class="image-profile" />
+        </div>
+        <div class="image-parent ml-4">
+          <div class="user-fullname">
+            {{ member.first_name}} {{ member.last_name}} {{ member.role_text }}
+          </div>
+          <div class="text-muted">{{ member.phone_number}}</div>
+          <div class="text-muted mb-2">{{ member.email}}</div>
+        </div>
+      </li>
+    </a>
+    <hr />
+  </div>
+  {% endfor %}
+</ul>
+<!-- END members list -->
+{% else %}
+<!-- No member in list -->
+<strong>There are no team members</strong>
+{% endif %} {% endblock %}
