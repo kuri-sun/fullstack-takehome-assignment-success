@@ -17,7 +17,7 @@ user to view, edit, add, and delete team members.
 
 ## <span id="building">Build application</span>
 
-<p style="margin: 15px 0 10px 0;"><span style='margin-right: 10px;'>✅ </span> You already installed Python 3 or above, and Django as well. If you don't want to do it. check <a href="https://docs.python.org/3/library/venv.html">here</a> to set up virtual evironment.</p>
+<p style="margin: 15px 0 10px 0;"><span style='margin-right: 10px;'>✅ </span> You already installed Python 3 or above, and Django as well. If you don't want to install it to globally, check <a href="https://docs.python.org/3/library/venv.html">here</a> to set up virtual evironment.</p>
 
 <p style="margin: 15px 0 10px 0;">1. Go to project directory</p>
 
@@ -34,6 +34,8 @@ python manage.py runserver
 <br/>
 
 ## <span id="testing">Testing application</span>
+
+<p style="margin: 15px 0 10px 0;"><span style='margin-right: 10px;'>✅ </span> You already installed Python 3 or above, and Django as well. If you don't want to install it to globally, check <a href="https://docs.python.org/3/library/venv.html">here</a> to set up virtual evironment.</p>
 
 <p style="margin: 15px 0 10px 0;">1. Go to project directory.</p>
 
