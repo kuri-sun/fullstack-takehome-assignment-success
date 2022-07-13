@@ -17,19 +17,15 @@ user to view, edit, add, and delete team members.
 
 ## <span id="building">Build application</span>
 
-<p style="margin: 15px 0 10px 0;">1. Make sure you're in base directory. and start virtual environment.</p>
+<p style="margin: 15px 0 10px 0;"><span style='margin-right: 10px;'>✅ </span> You already installed Python 3 or above, and Django as well. If you don't want to do it. check <a href="https://docs.python.org/3/library/venv.html">here</a> to set up virtual evironment.</p>
 
-```
-source env/bin/activate
-```
-
-<p style="margin: 15px 0 10px 0;">2. Go to project directory</p>
+<p style="margin: 15px 0 10px 0;">1. Go to project directory</p>
 
 ```
 cd instawork_homework
 ```
 
-<p style="margin: 15px 0 10px 0;">3. Start application</p>
+<p style="margin: 15px 0 10px 0;">2. Start application</p>
 
 ```
 python manage.py runserver
