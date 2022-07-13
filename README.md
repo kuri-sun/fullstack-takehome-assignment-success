@@ -19,7 +19,7 @@ user to view, edit, add, and delete team members.
 
 <p style="margin: 15px 0 10px 0;"><span style='margin-right: 10px;'>✅ </span> You already installed Python 3 or above, and Django as well. If you don't want to install it to globally, check <a href="https://docs.python.org/3/library/venv.html">here</a> to set up virtual evironment.</p>
 
-<p style="margin: 15px 0 10px 0;">1. Go to project directory</p>
+<p style="margin: 15px 0 10px 0;">1. Make sure you're in base directory first, and Go to project directory</p>
 
 ```
 cd instawork_homework
@@ -37,7 +37,7 @@ python manage.py runserver
 
 <p style="margin: 15px 0 10px 0;"><span style='margin-right: 10px;'>✅ </span> You already installed Python 3 or above, and Django as well. If you don't want to install it to globally, check <a href="https://docs.python.org/3/library/venv.html">here</a> to set up virtual evironment.</p>
 
-<p style="margin: 15px 0 10px 0;">1. Go to project directory.</p>
+<p style="margin: 15px 0 10px 0;">1. Make sure you're in base directory first, and Go to project directory.</p>
 
 ```
 cd instawork_homework
