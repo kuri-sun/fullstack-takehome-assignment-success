@@ -1,68 +1,61 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.views.generic import ListView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 from .models import Member
 from .form import MemberForm
+from django.contrib import messages
 
 # Create your views here.
 
-def homePage(request):
-    """
-    render home.html page when user access to "/"
-
-    :request http request object.
-    :return GET http response to render home.html to user's browser.
-    """ 
-
-    members = Member.objects.all()
-    members_count = members.count()
-    context = {'members': members, 'members_count': members_count}
-    return render(request, 'instawork_homework/home.html', context)
+class MemberList(ListView):
+  """
+  render home.html page when user access to "/"
+  """ 
+  model = Member
+  context_object_name = 'members'
+  template_name = 'member/home.html'
 
 
-def addMember(request):
-    """
-    render form.html page when user access to "/add"
+class CreateMember(CreateView):
+  """
+  render form.html page when user access to "/add"
+  """ 
+  model = Member
+  form_class = MemberForm
+  template_name = 'member/form.html'
+  success_url = reverse_lazy('home')
+  error_message = 'Error while saving, check your inputs.'
 
-    :request http request object.
-    :return http response to render form.html to user's browser.
-    """ 
-    page = 'add'
-
-    if request.method == 'POST':
-      form = MemberForm(request.POST) 
-      if form.is_valid():
-        form.save() # save to db
-        return redirect('home') # push to home.html
-      else:
-        context = {'page': page, 'form': form, 'errors': dict(form.errors) }
-        return render(request, 'instawork_homework/form.html', context) # push same page again with error message.
-    else:
-      context = {'page': page, 'form': MemberForm()}
-      return render(request, 'instawork_homework/form.html', context)
+  def form_invalid(self, form):
+    messages.error(self.request, self.error_message)
+    return super().form_invalid(form)
+  
+  # set context
+  def get_context_data(self, **kwargs):
+    context = super().get_context_data(**kwargs)
+    context['page'] = 'add' # for create new member form
+    return context
 
 
-def editMember(request, pk):
-    """
-    render form.html page when user access to "/edit"
+class UpdateMember(UpdateView):
+  """
+  render form.html page when user access to "/edit"
+  """ 
+  model = Member
+  form_class = MemberForm
+  template_name = 'member/form.html'
+  success_url = reverse_lazy('home')
+  error_message = 'Error while saving, check your inputs.'
 
-    :request http request object.
-    :pk primary key for Member object.
-    :return http response to render form.html to user's browser.
-    """ 
-    page = 'edit'
-    member = get_object_or_404(Member, id=pk)
-    form = MemberForm(instance=member)
+  def form_invalid(self, form):
+    messages.error(self.request, self.error_message)
+    return super().form_invalid(form)
 
-    if request.method == 'POST':
-      form = MemberForm(request.POST, instance=member)
-      if form.is_valid():
-        form.save() # update db Member data
-        return redirect('home') # push to home.html
-      else:
-        context = {'page': page, 'form': form, 'errors': dict(form.errors) }
-        return render(request, 'instawork_homework/form.html', context) # push same page again with error message.
-    else:
-      context = {'page': page, 'form': form, 'member': member}
-      return render(request, 'instawork_homework/form.html', context)
+  # set context
+  def get_context_data(self, **kwargs):
+    context = super().get_context_data(**kwargs)
+    context['page'] = 'edit' # for update member form
+    return context
 
 
 def deleteMember(request, pk):

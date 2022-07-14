@@ -20,8 +20,8 @@
     {% endif %}
 
     <!-- error handling message -->
-    {% if errors %} {% for _, error_message in errors.items %}
-    <span class="text-danger">{{error_message}}</span>
+    {% if messages %} {% for message in messages %}
+    <span class="text-danger">{{message}}</span>
     {% endfor %} {% endif %}
     <hr />
 

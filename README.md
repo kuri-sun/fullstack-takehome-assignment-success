@@ -1,7 +1,8 @@
 # <span style="font-size: 30px;">Full-stack take-home assignment</span> <img src="https://play-lh.googleusercontent.com/pE4AjuQLjUMzulbNL6fjVX4jMTXAtmO4kwHCEaU_0hfGJBIO3HRQ5alMsHwlAajhBa8=w480-h960-rw" alt="instawork-logo" style="height: 30px; width: 30px; margin-left: 10px;" />
 
 <span style='color: gray;'>This is the assignment for Instawork's Fall Internship 2022 position. <br/>The project is to implement a simple team-member management application that allows the
-user to view, edit, add, and delete team members.
+user to view, edit, add, and delete team members. <br/>
+Total how much I spent: 4.5 hours. (+2.5 hours to refine)
 </span>
 
 <br />
