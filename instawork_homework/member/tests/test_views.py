@@ -40,7 +40,7 @@ class TestViews(TestCase):
     response = self.client.get(self.home_url)
 
     self.assertEquals(response.status_code, 200)
-    self.assertTemplateUsed(response, 'instawork_homework/home.html')
+    self.assertTemplateUsed(response, 'member/home.html')
 
 
   def test_add_page_GET(self):
@@ -50,7 +50,7 @@ class TestViews(TestCase):
     response = self.client.get(self.add_url)
 
     self.assertEquals(response.status_code, 200)
-    self.assertTemplateUsed(response, 'instawork_homework/form.html')
+    self.assertTemplateUsed(response, 'member/form.html')
 
 
   def test_add_page_POST(self):
@@ -76,7 +76,7 @@ class TestViews(TestCase):
     response = self.client.get(self.edit_url)
 
     self.assertEquals(response.status_code, 200)
-    self.assertTemplateUsed(response, 'instawork_homework/form.html')
+    self.assertTemplateUsed(response, 'member/form.html')
 
 
   def test_edit_page_POST(self):
